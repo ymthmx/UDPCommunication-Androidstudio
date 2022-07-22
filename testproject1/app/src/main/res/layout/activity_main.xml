@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/foundation_title_bottom"
+        android:layout_alignParentTop="true"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/foundation_title_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
+
+        <RelativeLayout
+            android:id="@+id/title_rc_btn"
+            android:onClick="onTabChange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/title_rc_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/main_title_record" />
+
+            <TextView
+                android:id="@+id/title_rc_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/title_record_name"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp"
+                android:layout_below="@+id/title_rc_img"/>
+
+            <TextView
+                android:id="@+id/title_rc_unread_num"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/aii"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_toStartOf="@+id/title_rc_img" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/title_func_btn"
+            android:onClick="onTabChange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/title_func_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/main_title_function" />
+
+            <TextView
+                android:id="@+id/title_func_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_history_name"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/title_func_img"/>
+
+            <TextView
+                android:id="@+id/title_func_unread_num"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/aii"
+                android:visibility="gone"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_toStartOf="@+id/title_func_img"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/title_frd_btn"
+            android:onClick="onTabChange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/title_frd_img"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:focusable="false"
+                android:scaleType="centerInside"
+                android:src="@drawable/main_title_friend" />
+
+            <TextView
+                android:id="@+id/title_frd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/title_my_name"
+                android:textColor="#9A9A9A"
+                android:textSize="12sp"
+                android:layout_below="@+id/title_frd_img"/>
+
+            <TextView
+                android:id="@+id/title_frd_unread_num"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/aii"
+                android:visibility="gone"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_toStartOf="@+id/title_frd_img"/>
+        </RelativeLayout>
+
+
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/title_call_btn"-->
+<!--            android:onClick="onTabChange"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/title_call_img"-->
+<!--                android:layout_width="28dp"-->
+<!--                android:layout_height="28dp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:background="#ffffff"-->
+<!--                android:focusable="false"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/main_title_call" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/title_call_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/title_call_name"-->
+<!--                android:textColor="#9A9A9A"-->
+<!--                android:textSize="12sp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_below="@+id/title_call_img"/>-->
+<!--        </RelativeLayout>-->
+    </LinearLayout>
+
+</RelativeLayout>

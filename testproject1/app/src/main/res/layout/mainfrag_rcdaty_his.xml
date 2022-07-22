@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="horizontal"
+    tools:context=".mainFragment.rcdAty.HistoryActivity">
+
+
+        <Button
+            android:id="@+id/his_call_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+
+            android:background="#3156c4"
+            android:text="返回"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/delete_current_data_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/delete_current_data_btn" />
+
+    <Button
+        android:id="@+id/delete_current_data_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="5dp"
+        android:background="#3156c4"
+        android:text="删除当前IP数据"
+        app:layout_constraintEnd_toStartOf="@+id/delete_all_data_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/delete_all_data_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="5dp"
+        android:background="#3156c4"
+        android:text="删除所有IP数据"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/his_ip_group"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/his_call_back_btn"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RadioButton
+            android:id="@+id/radio_for_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="255.255.255.255"
+            android:textSize="9sp"/>
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/uav_info_list_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/his_ip_group"
+        app:layout_constraintTop_toBottomOf="@+id/delete_current_data_btn">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

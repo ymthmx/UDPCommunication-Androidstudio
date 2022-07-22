@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UDP聊天</string>
+    <string name="title_record_name">聊天</string>
+    <string name="title_my_name">我的</string>
+    <string name="title_history_name">聊天记录</string>
+    <string name="title_call_name">电话</string>
+</resources>
